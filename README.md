@@ -1,6 +1,17 @@
 # My expenses
 
 Projeto de um app que controla gastos
+Proposta do curso da MJV de criar um app com os conceitos ensinados durante o curso no prazo de 5 dias
+
+Conceitos
+
+- Componentização
+- Stateful e Stateless
+- Tema
+- Provider
+- Estrutura de pastas
+- Uso de packages
+- Armazenamento com Shared Preferences
 
 ## Estrutura do projeto
 
