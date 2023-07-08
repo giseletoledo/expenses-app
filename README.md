@@ -4,7 +4,7 @@ Projeto de um app que controla gastos
 
 ## Estrutura do projeto
 
-lib
+``` lib
 ├── components
 │   ├── alert_balance.dart
 │   ├── card_balance_component.dart
@@ -27,6 +27,7 @@ lib
     │   ├── detalhe_item_widget.dart
     │   └── detalhe_page.dart
     └── home_page.dart
+    ```
 
 ## Packages
 
