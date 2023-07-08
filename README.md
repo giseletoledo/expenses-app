@@ -27,7 +27,7 @@ Projeto de um app que controla gastos
     │   ├── detalhe_item_widget.dart
     │   └── detalhe_page.dart
     └── home_page.dart
-    ```
+```
 
 ## Packages
 
