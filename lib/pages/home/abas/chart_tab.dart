@@ -16,33 +16,41 @@ class ChartTab extends StatelessWidget {
   Widget build(BuildContext context) {
     final chartData = getCategoryData(expenses);
 
-    return Padding(
-      padding: const EdgeInsets.all(48.0),
-      child: Container(
-        alignment: Alignment.bottomCenter,
-        height: 300,
-        child: BarChart(
-          BarChartData(
-            barGroups: getBarGroups(chartData),
-            alignment: BarChartAlignment.spaceBetween,
-            borderData: FlBorderData(
-              show: true,
-              border: const Border(
-                bottom: BorderSide(width: 1),
-                left: BorderSide(width: 1),
-              ),
-            ),
-            titlesData: FlTitlesData(
-              topTitles: const AxisTitles(
-                  sideTitles: SideTitles(reservedSize: 30, showTitles: false)),
-              rightTitles: const AxisTitles(
-                  sideTitles: SideTitles(reservedSize: 30, showTitles: false)),
-              bottomTitles: AxisTitles(
-                sideTitles: _getBottomTitles(chartData),
+    return Container(
+      alignment: Alignment.center,
+      height: MediaQuery.of(context).size.height * 0.7,
+      child: Column(
+        children: [
+          Flexible(
+            child: Padding(
+              padding: const EdgeInsets.all(24.0),
+              child: BarChart(
+                BarChartData(
+                  barGroups: getBarGroups(chartData),
+                  alignment: BarChartAlignment.spaceAround,
+                  borderData: FlBorderData(
+                    show: true,
+                    border: const Border(
+                      bottom: BorderSide(width: 1),
+                      left: BorderSide(width: 1),
+                    ),
+                  ),
+                  titlesData: FlTitlesData(
+                    topTitles: const AxisTitles(
+                        sideTitles:
+                            SideTitles(reservedSize: 30, showTitles: false)),
+                    rightTitles: const AxisTitles(
+                        sideTitles:
+                            SideTitles(reservedSize: 30, showTitles: false)),
+                    bottomTitles: AxisTitles(
+                      sideTitles: _getBottomTitles(chartData),
+                    ),
+                  ),
+                ),
               ),
             ),
           ),
-        ),
+        ],
       ),
     );
   }
