@@ -27,6 +27,26 @@ class ChartTab extends StatelessWidget {
               child: BarChart(
                 BarChartData(
                   barGroups: getBarGroups(chartData),
+                  barTouchData: BarTouchData(
+                    touchTooltipData: BarTouchTooltipData(
+                      tooltipBgColor: Colors.blueGrey.withOpacity(0.8),
+                      tooltipHorizontalAlignment: FLHorizontalAlignment.center,
+                      tooltipMargin: 4,
+                      fitInsideVertically: true,
+                      direction: TooltipDirection.top,
+                      getTooltipItem: (group, groupIndex, rod, rodIndex) {
+                        final categoryData = chartData[group.x.toInt()];
+                        final value = categoryData.count.toDouble();
+                        final labelText =
+                            getCategoryLabel(categoryData.category);
+
+                        return BarTooltipItem(
+                          '$labelText\n$value', // Texto do tooltip
+                          TextStyle(color: Colors.white),
+                        );
+                      },
+                    ),
+                  ),
                   alignment: BarChartAlignment.spaceAround,
                   borderData: FlBorderData(
                     show: true,
