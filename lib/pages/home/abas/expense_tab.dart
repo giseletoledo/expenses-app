@@ -41,60 +41,62 @@ class _ExpenseTab extends State<ExpenseTab> {
           width: MediaQuery.of(context).size.width,
           child: CardBalanceComponent(userStore: userStore),
         ),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            CategoryCard(
-              icon: Icons.format_list_bulleted,
-              color: Colors.deepPurple,
-              isSelected: selectedCategory == null,
-              onPressed: () {
-                setState(() {
-                  selectedCategory = null;
-                });
-              },
-            ),
-            CategoryCard(
-              icon: Icons.deck,
-              color: Colors.deepPurple,
-              isSelected: selectedCategory == ExpenseCategory.lazer,
-              onPressed: () {
-                setState(() {
-                  selectedCategory = ExpenseCategory.lazer;
-                });
-              },
-            ),
-            CategoryCard(
-              icon: Icons.question_mark,
-              color: Colors.deepPurple,
-              isSelected: selectedCategory == ExpenseCategory.diversas,
-              onPressed: () {
-                setState(() {
-                  selectedCategory = ExpenseCategory.diversas;
-                });
-              },
-            ),
-            CategoryCard(
-              icon: Icons.restaurant,
-              color: Colors.deepPurple,
-              isSelected: selectedCategory == ExpenseCategory.alimentacao,
-              onPressed: () {
-                setState(() {
-                  selectedCategory = ExpenseCategory.alimentacao;
-                });
-              },
-            ),
-            CategoryCard(
-              icon: Icons.shopping_bag,
-              color: Colors.deepPurple,
-              isSelected: selectedCategory == ExpenseCategory.vestuario,
-              onPressed: () {
-                setState(() {
-                  selectedCategory = ExpenseCategory.vestuario;
-                });
-              },
-            ),
-          ],
+        FittedBox(
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            children: [
+              CategoryCard(
+                icon: Icons.format_list_bulleted,
+                color: Colors.deepPurple,
+                isSelected: selectedCategory == null,
+                onPressed: () {
+                  setState(() {
+                    selectedCategory = null;
+                  });
+                },
+              ),
+              CategoryCard(
+                icon: Icons.deck,
+                color: Colors.deepPurple,
+                isSelected: selectedCategory == ExpenseCategory.lazer,
+                onPressed: () {
+                  setState(() {
+                    selectedCategory = ExpenseCategory.lazer;
+                  });
+                },
+              ),
+              CategoryCard(
+                icon: Icons.question_mark,
+                color: Colors.deepPurple,
+                isSelected: selectedCategory == ExpenseCategory.diversas,
+                onPressed: () {
+                  setState(() {
+                    selectedCategory = ExpenseCategory.diversas;
+                  });
+                },
+              ),
+              CategoryCard(
+                icon: Icons.restaurant,
+                color: Colors.deepPurple,
+                isSelected: selectedCategory == ExpenseCategory.alimentacao,
+                onPressed: () {
+                  setState(() {
+                    selectedCategory = ExpenseCategory.alimentacao;
+                  });
+                },
+              ),
+              CategoryCard(
+                icon: Icons.shopping_bag,
+                color: Colors.deepPurple,
+                isSelected: selectedCategory == ExpenseCategory.vestuario,
+                onPressed: () {
+                  setState(() {
+                    selectedCategory = ExpenseCategory.vestuario;
+                  });
+                },
+              ),
+            ],
+          ),
         ),
         Expanded(
           child: ListView.builder(
