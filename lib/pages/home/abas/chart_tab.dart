@@ -36,13 +36,13 @@ class ChartTab extends StatelessWidget {
                       direction: TooltipDirection.top,
                       getTooltipItem: (group, groupIndex, rod, rodIndex) {
                         final categoryData = chartData[group.x.toInt()];
-                        final value = categoryData.count.toDouble();
+                        final value = categoryData.count;
                         final labelText =
                             getCategoryLabel(categoryData.category);
 
                         return BarTooltipItem(
                           '$labelText\n$value', // Texto do tooltip
-                          TextStyle(color: Colors.white),
+                          const TextStyle(color: Colors.white),
                         );
                       },
                     ),
@@ -85,6 +85,8 @@ class ChartTab extends StatelessWidget {
         barRods: [
           BarChartRodData(
             toY: categoryData.count.toDouble(),
+            width: 25,
+            borderRadius: BorderRadius.circular(4),
             color: getCategoryColor(categoryData.category),
           ),
         ],
