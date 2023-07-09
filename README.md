@@ -1,6 +1,6 @@
 # My expenses
 
-<img width="33%" src="https://github.com/giseletoledo/expensesapp/blob/main/telaapp/mockuper.png" alt="Screenshot detalhe de filmes recentes do TMDB do app Android">
+<img width="50%" src="https://github.com/giseletoledo/expensesapp/blob/main/telaapp/mockuper.png" alt="Screenshot detalhe de filmes recentes do TMDB do app Android">
 
 Projeto de um app que controla gastos
 Proposta do curso da MJV de criar um app com os conceitos ensinados durante o curso no prazo de 5 dias
